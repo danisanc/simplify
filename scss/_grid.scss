@@ -1,1 +1,28 @@
-// Code here
+// Create mixins
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin col($width) {
+  width: $width;
+}
+
+// Create elements
+// Row
+.row {
+  @include row;
+  justify-content: start;
+}
+
+.row-reverse {
+  @include row;
+  justify-content: end;
+}
+
+// Column
+@for $i from 1 to $griddivisions {
+  .col-#{$i} {
+    @include col(unquote((100 / $i) + '%'));
+  }
+}
