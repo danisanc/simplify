@@ -1,0 +1,19 @@
+{
+  "name": "simplify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0",
+    "sass-lint": "^1.12.1"
+  },
+  "scripts": {
+    "dev": "gulp sass",
+    "dev:watch": "gulp watchSass"
+  },
+  "author": "",
+  "license": "MIT"
+}
