@@ -21,8 +21,19 @@
 }
 
 // Column
-@for $i from 1 to $griddivisions {
+@for $i from 1 to ($griddivisions + 1) {
   .col-#{$i} {
     @include col(unquote((100 / $i) + '%'));
+  }
+}
+
+// Responsive columns
+@each $size, $value in $medias {
+  @media screen and (min-width: unquote($value + 'px')) {
+    @for $i from 1 to ($griddivisions + 1) {
+      .#{$size}-col-#{$i} {
+        @include col(unquote((100 / $i) + '%'));
+      }
+    }
   }
 }
