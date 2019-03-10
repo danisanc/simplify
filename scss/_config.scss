@@ -1,11 +1,14 @@
+// Base container size
+$containersize: 768;
+
 // Divisions
 $griddivisions: 12;
 
 // Responsive
 $medias: (
-  'xs': 600,
-  'sm': 768,
-  'md': 992,
-  'lg': 1200,
-  'xl': 600
+  'xl': 1690,
+  'lg': 1280,
+  'md': 980,
+  'sm': 736,
+  'xs': 480
 );
