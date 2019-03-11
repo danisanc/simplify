@@ -19,7 +19,7 @@
 .row {
   @extend %row;
 
-  &--horizontal {
+  &--vertical {
     @extend %row;
     flex-direction: column;
   }
