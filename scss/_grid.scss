@@ -1,1 +1,51 @@
-// Code here
+// Container
+.container {
+  margin: 0 auto;
+  max-width: $containersize * 1px;
+
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+// Row
+%row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row {
+  @extend %row;
+
+  &--vertical {
+    @extend %row;
+    flex-direction: column;
+  }
+}
+
+// Column
+.col {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+@for $i from 1 through $griddivisions {
+  .col-#{$i} {
+    flex: 0 0 (100 / $i) * 1%;
+    max-width: (100 / $i) * 1%;
+  }
+}
+
+// Responsive columns
+@each $size, $value in $medias {
+  @media screen and (max-width: unquote($value + 'px')) {
+    @for $i from 1 to ($griddivisions + 1) {
+      .#{$size}-col-#{$i} {
+        flex: 0 0 (100 / $i) * 1%;
+        max-width: (100 / $i) * 1%;
+      }
+    }
+  }
+}
