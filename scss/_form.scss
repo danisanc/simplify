@@ -33,6 +33,8 @@
 }
 
 *[class*='form-group'] {
+  padding: $basepadding / 3;
+
   label {
     display: block;
     font-size: $basefontsize;
@@ -59,4 +61,32 @@
   flex: 1 1 auto;
   justify-content: flex-end;
   max-width: 100%;
+  padding: $basepadding / 3;
+
+  .form-button {
+    cursor: pointer;
+    margin-left: $basemargin / 3;
+    padding: $basepadding / 1.5;
+
+    &--yes {
+      background-color: $yesgreen;
+      border: 1px solid $yesgreen;
+      border-radius: 4px;
+      color: $white;
+    }
+
+    &--no {
+      background-color: $nored;
+      border: 1px solid $nored;
+      border-radius: 4px;
+      color: $white;
+    }
+
+    &--normal {
+      background-color: $normalblue;
+      border: 1px solid $normalblue;
+      border-radius: 4px;
+      color: $white;
+    }
+  }
 }
