@@ -1,0 +1,4 @@
+// Table
+@mixin border(){
+    border-bottom: .1rem solid rgba($color: #000000, $alpha: 0.1);
+}
