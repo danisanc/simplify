@@ -6,16 +6,20 @@ $basefontsize: 1em;
 
 // Colors
 $white: #fff;
+$black: #000;
 $yesgreen: #2d882d;
 $nored: #a7383e;
 $normalblue: #008dca;
+$darken-grey-color: #424242;
+$lighten-grey-color: rgba($color: #000, $alpha: .05);
+$light-grey-color: rgba($color: #000, $alpha: .1);
+$form-border-color: #d3d3d3;
 
 // Divisions
 $griddivisions: 12;
 $formdivisions: 6;
 
 // Forms
-$form-border-color: #d3d3d3;
 $form-fields-shadow: 0 2px 8px rgba(218, 218, 218, .5);
 
 // Responsive
@@ -26,10 +30,3 @@ $medias: (
   'sm': 736,
   'xs': 480
 );
-
-
-// Color Variables
-$darken-grey-color: #424242;
-$black-color: #000000;
-$lighten-grey-color: rgba($color: #000000, $alpha: 0.05);
-$light-grey-color: rgba($color: #000000, $alpha: 0.1);

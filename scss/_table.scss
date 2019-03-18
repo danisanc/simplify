@@ -1,61 +1,60 @@
 .table {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-    width: 100%;
-    display: table;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 1.6rem;
-    text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
 
-    thead {
-        color: $darken-grey-color;
-        
-        tr {
-            display: table-row;
-        }
-        th {
-            padding: 2rem 0;
-            @include border;
-            display: table-cell;
+  thead {
+    color: $darken-grey-color;
 
-        }
+    tr {
+      display: table-row;
     }
 
-    tbody {
-        display: table-row-group;
-
-        tr {
-            display: table-row;
-        }
-        td {
-            display: table-cell;
-            padding: 1.5rem 0;
-            @include border;
-        }
+    th {
+      @include border;
+      display: table-cell;
+      padding: 2rem 0;
     }
+  }
 
-    &--striped {
-        tbody {
-            
-            tr:nth-child(odd){
-                background-color: $lighten-grey-color;
-               
-            }
-        }
+  tbody {
+    display: table-row-group;
+
+    tr {
+      display: table-row;
     }
 
-    &--align-left {
-        text-align: left;
+    td {
+      @include border;
+      display: table-cell;
+      padding: 1.5rem 0;
     }
-    &--align-right {
-        text-align: right;
-    }
+  }
 
-    &--highlight {
-        tbody {
-            tr:hover {
-                background-color: $light-grey-color;
-            }
-        }
+  &--striped {
+    tr {
+      &:nth-child(odd) {
+        background-color: $lighten-grey-color;
+      }
     }
+  }
+
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
+  &--highlight {
+    tr {
+      &:hover {
+        background-color: $light-grey-color;
+      }
+    }
+  }
 }
