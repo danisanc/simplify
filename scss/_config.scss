@@ -1,8 +1,22 @@
-// Base container size
+// Base
 $containersize: 768;
+$basepadding: 15px;
+$basemargin: 15px;
+$basefontsize: 1em;
+
+// Colors
+$white: #fff;
+$yesgreen: #2d882d;
+$nored: #a7383e;
+$normalblue: #008dca;
 
 // Divisions
 $griddivisions: 12;
+$formdivisions: 6;
+
+// Forms
+$form-border-color: #d3d3d3;
+$form-fields-shadow: 0 2px 8px rgba(218, 218, 218, .5);
 
 // Responsive
 $medias: (

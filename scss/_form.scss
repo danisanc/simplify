@@ -1,1 +1,92 @@
-// Code here
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--bordered {
+    border: 1px solid $form-border-color;
+    border-radius: 5px;
+    padding: $basepadding;
+  }
+}
+
+.form-group {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+@for $i from 1 through $formdivisions {
+  .form-group-#{$i} {
+    flex: 0 0 (100 / $i) * 1%;
+    max-width: (100 / $i) * 1%;
+  }
+}
+
+@each $size, $value in $medias {
+  @media screen and (max-width: unquote($value + 'px')) {
+    @for $i from 1 to ($griddivisions + 1) {
+      .#{$size}-form-group-#{$i} {
+        flex: 0 0 (100 / $i) * 1%;
+        max-width: (100 / $i) * 1%;
+      }
+    }
+  }
+}
+
+*[class*='form-group'] {
+  padding: $basepadding / 3;
+
+  label {
+    display: block;
+    font-size: $basefontsize;
+  }
+
+  input,
+  select,
+  textarea {
+    border: 1px solid $form-border-color;
+    border-radius: 5px;
+    display: block;
+    padding: $basepadding / 2;
+    resize: vertical;
+    width: 100%;
+
+    &:focus {
+      box-shadow: $form-fields-shadow;
+    }
+  }
+}
+
+.form-actions {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  max-width: 100%;
+  padding: $basepadding / 3;
+
+  .form-button {
+    cursor: pointer;
+    margin-left: $basemargin / 3;
+    padding: $basepadding / 1.5;
+
+    &--yes {
+      background-color: $yesgreen;
+      border: 1px solid $yesgreen;
+      border-radius: 4px;
+      color: $white;
+    }
+
+    &--no {
+      background-color: $nored;
+      border: 1px solid $nored;
+      border-radius: 4px;
+      color: $white;
+    }
+
+    &--normal {
+      background-color: $normalblue;
+      border: 1px solid $normalblue;
+      border-radius: 4px;
+      color: $white;
+    }
+  }
+}
