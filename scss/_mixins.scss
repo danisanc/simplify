@@ -1,4 +1,20 @@
 // Table
-@mixin border {
-  border-bottom: .1rem solid $black;
+@mixin cell($padding) {
+  border: 1px solid $grey;
+  display: table-cell;
+  padding: $padding;
+  text-align: start;
+}
+
+// Forms
+@mixin form-button-style($color, $hovercolor, $textcolor) {
+  background-color: $color;
+  border: 1px solid $color;
+  border-radius: 4px;
+  color: $textcolor;
+
+  &:hover {
+    background-color: $hovercolor;
+    border: 1px solid $hovercolor;
+  }
 }

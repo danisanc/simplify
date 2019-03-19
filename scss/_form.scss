@@ -3,9 +3,9 @@
   flex-wrap: wrap;
 
   &--bordered {
-    border: 1px solid $form-border-color;
+    border: 1px solid $grey;
     border-radius: 5px;
-    padding: $basepadding;
+    padding: $padding / 1.5;
   }
 }
 
@@ -33,25 +33,25 @@
 }
 
 *[class*='form-group'] {
-  padding: $basepadding / 3;
+  padding: $padding / 3;
 
   label {
     display: block;
-    font-size: $basefontsize;
+    font-size: $font-size;
   }
 
   input,
   select,
   textarea {
-    border: 1px solid $form-border-color;
+    border: 1px solid $grey;
     border-radius: 5px;
     display: block;
-    padding: $basepadding / 2;
+    padding: $padding / 2;
     resize: vertical;
     width: 100%;
 
     &:focus {
-      box-shadow: $form-fields-shadow;
+      box-shadow: $shadow;
     }
   }
 }
@@ -61,32 +61,23 @@
   flex: 1 1 auto;
   justify-content: flex-end;
   max-width: 100%;
-  padding: $basepadding / 3;
+  padding: $padding / 3;
 
   .form-button {
     cursor: pointer;
-    margin-left: $basemargin / 3;
-    padding: $basepadding / 1.5;
+    margin-left: $margin / 3;
+    padding: $padding / 1.5;
 
     &--yes {
-      background-color: $yesgreen;
-      border: 1px solid $yesgreen;
-      border-radius: 4px;
-      color: $white;
+      @include form-button-style($yes-color, $yes-color-hover, $white)
     }
 
     &--no {
-      background-color: $nored;
-      border: 1px solid $nored;
-      border-radius: 4px;
-      color: $white;
+      @include form-button-style($no-color, $no-color-hover, $white)
     }
 
     &--normal {
-      background-color: $normalblue;
-      border: 1px solid $normalblue;
-      border-radius: 4px;
-      color: $white;
+      @include form-button-style($normal-color, $normal-color-hover, $white)
     }
   }
 }

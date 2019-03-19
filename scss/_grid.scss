@@ -9,18 +9,12 @@
   }
 }
 
-// Row
-%row {
+.row {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-}
-
-.row {
-  @extend %row;
 
   &--vertical {
-    @extend %row;
     flex-direction: column;
   }
 }

@@ -1,22 +1,18 @@
 .table {
   border-collapse: collapse;
-  border-spacing: 0;
   display: table;
-  font-size: 1.6rem;
-  text-align: center;
+  font-size: $font-size;
   width: 100%;
 
   thead {
-    color: $darken-grey-color;
+    color: $black;
 
     tr {
       display: table-row;
     }
 
     th {
-      @include border;
-      display: table-cell;
-      padding: 2rem 0;
+      @include cell($padding / 1.5);
     }
   }
 
@@ -28,33 +24,37 @@
     }
 
     td {
-      @include border;
-      display: table-cell;
-      padding: 1.5rem 0;
+      @include cell($padding / 2);
     }
   }
 
   &--striped {
-    tr {
+    tbody > tr {
       &:nth-child(odd) {
-        background-color: $lighten-grey-color;
+        background-color: $light-grey;
       }
     }
   }
 
-  &--align-left {
-    text-align: left;
+  &--highlight {
+    tbody > tr {
+      &:hover {
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  &--align-center {
+    tr > td,
+    tr > th {
+      text-align: center;
+    }
   }
 
   &--align-right {
-    text-align: right;
-  }
-
-  &--highlight {
-    tr {
-      &:hover {
-        background-color: $light-grey-color;
-      }
+    tr > td,
+    tr > th {
+      text-align: right;
     }
   }
 }

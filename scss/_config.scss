@@ -1,26 +1,31 @@
 // Base
 $containersize: 768;
-$basepadding: 15px;
-$basemargin: 15px;
-$basefontsize: 1em;
+$padding: 15px;
+$margin: 15px;
+$font-size: 1em;
 
 // Colors
+$yes-color: #2d882d;
+$yes-color-hover: #38a538;
+
+$no-color: #a7383e;
+$no-color-hover: #c24148;
+
+$normal-color: #008dca;
+$normal-color-hover: #04a1e4;
+
 $white: #fff;
 $black: #000;
-$yesgreen: #2d882d;
-$nored: #a7383e;
-$normalblue: #008dca;
-$darken-grey-color: #424242;
-$lighten-grey-color: rgba($color: #000, $alpha: .05);
-$light-grey-color: rgba($color: #000, $alpha: .1);
-$form-border-color: #d3d3d3;
+
+$grey: #d3d3d3;
+$light-grey: #e6e4e4;
 
 // Divisions
 $griddivisions: 12;
 $formdivisions: 6;
 
 // Forms
-$form-fields-shadow: 0 2px 8px rgba(218, 218, 218, .5);
+$shadow: 0 2px 8px rgba(218, 218, 218, .5);
 
 // Responsive
 $medias: (
