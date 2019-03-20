@@ -1,1 +1,13 @@
-// Soon
+.list-group {
+  list-style-type: circle;
+  margin: 0;
+  padding-left: $padding;
+
+  &--ordered {
+    list-style-type: decimal;
+  }
+
+  li {
+    padding: $padding / 4;
+  }
+}
