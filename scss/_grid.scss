@@ -17,6 +17,22 @@
   &--vertical {
     flex-direction: column;
   }
+
+  &--align-end {
+    justify-content: end;
+  }
+
+  &--align-center {
+    justify-content: center;
+  }
+
+  &--align-around {
+    justify-content: space-around;
+  }
+
+  &--align-between {
+    justify-content: space-between;
+  }
 }
 
 // Column
@@ -27,8 +43,8 @@
 
 @for $i from 1 through $griddivisions {
   .col-#{$i} {
-    flex: 0 0 (100 / $i) * 1%;
-    max-width: (100 / $i) * 1%;
+    flex: 0 0 (100 / ($griddivisions / $i)) * 1%;
+    max-width: (100 / ($griddivisions / $i)) * 1%;
   }
 }
 
@@ -37,8 +53,8 @@
   @media screen and (max-width: unquote($value + 'px')) {
     @for $i from 1 to ($griddivisions + 1) {
       .#{$size}-col-#{$i} {
-        flex: 0 0 (100 / $i) * 1%;
-        max-width: (100 / $i) * 1%;
+        flex: 0 0 (100 / ($griddivisions / $i)) * 1%;
+        max-width: (100 / ($griddivisions / $i)) * 1%;
       }
     }
   }
