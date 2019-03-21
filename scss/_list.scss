@@ -9,5 +9,9 @@
 
   li {
     padding: $padding / 4;
+
+    &.active {
+      color: $normal-color;
+    }
   }
 }
