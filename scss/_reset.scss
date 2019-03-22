@@ -20,3 +20,23 @@ body {
   'Helvetica Neue',
   sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $dark-grey; 
+}
