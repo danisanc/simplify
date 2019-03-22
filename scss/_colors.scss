@@ -1,0 +1,10 @@
+@each $color-key, $color-value in $colors {
+    @each $color-tone, $tone-value in $color-value {
+        .#{$color-key}-#{$color-tone}-color {
+            background-color: $tone-value;
+        }
+        .#{$color-key}-#{$color-tone}-text {
+            color: $tone-value;
+        }
+    }
+}
