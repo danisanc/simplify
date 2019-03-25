@@ -69,36 +69,34 @@
         float: left;
 
         tr > th {
-          text-align: left;
+          border: 0;
           display: block;
-          padding: ($padding/2);
-          text-align: right;
-          border:none;
+          padding: ($padding / 2);
+          text-align: left;
         }
       }
 
       tbody {
         display: block;
-        width: auto;
-        position: relative;
         overflow-x: scroll;
+        position: relative;
         white-space: nowrap;
-        
+        width: auto;
+
         tr {
           display: inline-block;
+
           &:nth-child(odd) {
             background-color: $light-grey;
           }
 
           td {
+            border: 0;
             display: block;
             text-align: left;
-            border: none;
           }
-
         }
       }
-      
     }
   }
 }

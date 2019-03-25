@@ -18,6 +18,6 @@
     "dev:watch": "gulp watchSass",
     "build": "gulp build"
   },
-  "author": "",
+  "author": "Daniel Santos",
   "license": "MIT"
 }

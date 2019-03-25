@@ -53,22 +53,3 @@
     max-width: (100 / ($griddivisions / $i)) * 1%;
   }
 }
-
-// Responsive area
-@each $size, $value in $medias {
-  @media screen and (max-width: unquote($value + 'px')) {
-
-    // Columns
-    @for $i from 1 to ($griddivisions + 1) {
-      .#{$size}-col-#{$i} {
-        display: block;
-        flex: 0 0 (100 / ($griddivisions / $i)) * 1%;
-        max-width: (100 / ($griddivisions / $i)) * 1%;
-      }
-    }
-
-    .#{$size}-col-hide {
-      display: none;
-    }
-  }
-}

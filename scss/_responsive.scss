@@ -1,0 +1,24 @@
+// Responsive area
+@each $size, $value in $medias {
+  @media screen and (max-width: unquote($value + 'px')) {
+    @for $i from 1 to ($griddivisions + 1) {
+      // Columns
+      .#{$size}-col-#{$i} {
+        display: block;
+        flex: 0 0 (100 / ($griddivisions / $i)) * 1%;
+        max-width: (100 / ($griddivisions / $i)) * 1%;
+      }
+
+      // Forms
+      .#{$size}-form-group-#{$i} {
+        flex: 0 0 (100 / $i) * 1%;
+        max-width: (100 / $i) * 1%;
+      }
+    }
+
+    // Columns
+    .#{$size}-col-hide {
+      display: none;
+    }
+  }
+}

@@ -21,17 +21,6 @@
   }
 }
 
-@each $size, $value in $medias {
-  @media screen and (max-width: unquote($value + 'px')) {
-    @for $i from 1 to ($griddivisions + 1) {
-      .#{$size}-form-group-#{$i} {
-        flex: 0 0 (100 / $i) * 1%;
-        max-width: (100 / $i) * 1%;
-      }
-    }
-  }
-}
-
 *[class*='form-group'] {
   padding: $padding / 3;
 
@@ -69,15 +58,15 @@
     padding: $padding / 1.5;
 
     &--yes {
-      @include form-button-style($yes-color, $yes-color-hover, $white)
+      @include form-button-style($yes-color, $yes-color-hover, $white);
     }
 
     &--no {
-      @include form-button-style($no-color, $no-color-hover, $white)
+      @include form-button-style($no-color, $no-color-hover, $white);
     }
 
     &--normal {
-      @include form-button-style($normal-color, $normal-color-hover, $white)
+      @include form-button-style($normal-color, $normal-color-hover, $white);
     }
   }
 }

@@ -12,6 +12,8 @@
   border: 1px solid $color;
   border-radius: 4px;
   color: $textcolor;
+  font-size: 1em;
+  text-decoration: none;
 
   &:hover {
     background-color: $hovercolor;
