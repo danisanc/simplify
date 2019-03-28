@@ -40,3 +40,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: $dark-grey; 
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

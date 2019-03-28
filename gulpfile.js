@@ -15,7 +15,7 @@ function sassFunc() {
 }
 
 function watchSass() {
-    watch('./scss/*.scss', sassFunc)
+    watch('./scss/**/*.scss', sassFunc)
 }
 
 function buildFunc() {
