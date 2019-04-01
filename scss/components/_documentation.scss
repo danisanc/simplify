@@ -102,6 +102,27 @@
     }
   }
 
+  &__info {
+    border-bottom: 1px solid $grey;
+
+    &-img {
+      height: 10rem;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+
+    }
+
+    &-text {
+      padding: 0 5%;
+      text-align: center;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__content {
     float: right;
     height: 100%;
@@ -119,11 +140,11 @@
   &__text {
     height: 100%;
     overflow-y: scroll;
-    padding: 2% 10%;
+    padding: 5%;
     width: 100%;
 
     @media screen and (max-width: unquote(map-get($medias, md) + 'px')) {
-      padding-top: 10%;
+      padding-top: 20%;
      }
   }
 
@@ -134,7 +155,7 @@ input {
 }
 
 input:checked ~ label .doc__menu-button {
-  box-shadow: 0 0 0 130vw $black-semitransparent;
+  box-shadow: 0 0 0 180vw $black-semitransparent;
 }
 
 input:checked ~ .doc__menu {
