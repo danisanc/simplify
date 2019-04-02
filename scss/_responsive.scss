@@ -11,8 +11,8 @@
 
       // Forms
       .#{$size}-form-group-#{$i} {
-        flex: 0 0 (100 / $i) * 1%;
-        max-width: (100 / $i) * 1%;
+        flex: 0 0 (100 / ($formdivisions / $i)) * 1%;
+        max-width: (100 / ($formdivisions / $i)) * 1%;
       }
     }
 

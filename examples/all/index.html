@@ -10,20 +10,37 @@
     <link rel="stylesheet" href="../../dest/simplify.css">
 
     <style>
+        h1, h2, h3, h4, h5, h6 {
+            margin: 30px 0px 10px 0px;
+        }
+
+        *[class*=container] {
+            padding: 10px 0px;
+        }
+
+        div[class*=row] {
+            margin-bottom: 10px;
+            background-color: #0077ff4f;
+            border: 1px solid #0077ff;
+            padding: 10px;
+        }
+
         div[class*=col] {
-            height: 50px;
-            background-color: rgba(143, 143, 228, 0.432);
-            border: 1px solid rgba(120, 118, 245, 0.63);
-            color: rgba(120, 118, 245, 0.63);
+            height: 40px;
+            background-color: #6db9f7;
+            border: 1px solid #1e88e5;
+            color: #fff;
             text-align: center;
-            line-height: 50px;
+            line-height: 40px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Grid example</h1>
+        <h1>#Grid example</h1>
+
+        <h4>Auto adjust size</h4>
         <div class="row">
             <div class="col">col</div>
             <div class="col">col</div>
@@ -33,6 +50,7 @@
             <div class="col">col</div>
         </div>
 
+        <h4>Manual adjust size</h4>
         <div class="row">
             <div class="col-4">col-4</div>
             <div class="col-8">col-8</div>
@@ -46,22 +64,59 @@
             <div class="col-2">col-2</div>
             <div class="col-2">col-2</div>
         </div>
+
+        <h4>Align center</h4>
+        <div class="row row--align-center">
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+        </div>
+
+        <h4>Align end</h4>
+        <div class="row row--align-end">
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+        </div>
+
+        <h4>Align around</h4>
+        <div class="row row--align-around">
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+        </div>
+
+        <h4>Align between</h4>
+        <div class="row row--align-between">
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+        </div>
+
+        <h4>Vertical</h4>
+        <div class="row row--vertical">
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+            <div class="col-2">col-2</div>
+        </div>
     </div>
 
     <div class="container">
-        <h1>Form Example</h1>
+        <h1>#Form Example</h1>
+
+        <h4>Form with border</h4>
         <form action="" class="form form--bordered">
-            <div class="form-group-2">
+            <div class="form-group-3">
                 <label for="name">Full name</label>
                 <input type="text" name="name" placeholder="John Doe">
             </div>
 
-            <div class="form-group-2">
+            <div class="form-group-3">
                 <label for="email">Email</label>
                 <input type="text" name="email" placeholder="johndoe@email.com">
             </div>
 
-            <div class="form-group-1">
+            <div class="form-group-6">
                 <label for="select">Select</label>
                 <select name="select">
                     <option value="1">Option</option>
@@ -71,7 +126,7 @@
                 </select>
             </div>
 
-            <div class="form-group-1">
+            <div class="form-group-6">
                 <label for="description">Description</label>
                 <textarea name="description" placeholder="Hi, my name is John Doe"></textarea>
             </div>
@@ -85,7 +140,43 @@
     </div>
 
     <div class="container">
-        <h1>Table example</h1>
+        <h4>Form without border</h4>
+        <form action="" class="form">
+            <div class="form-group-3">
+                <label for="name">Full name</label>
+                <input type="text" name="name" placeholder="John Doe">
+            </div>
+
+            <div class="form-group-3">
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="johndoe@email.com">
+            </div>
+
+            <div class="form-group-6">
+                <label for="select">Select</label>
+                <select name="select">
+                    <option value="1">Option</option>
+                    <option value="1">Option</option>
+                    <option value="1">Option</option>
+                    <option value="1">Option</option>
+                </select>
+            </div>
+
+            <div class="form-group-6">
+                <label for="description">Description</label>
+                <textarea name="description" placeholder="Hi, my name is John Doe"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button class="form-button form-button--normal">Voltar</button>
+                <button class="form-button form-button--no">Cancelar</button>
+                <button class="form-button form-button--yes">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>#Table example</h1>
         <table class="table table--striped table--responsive">
             <thead>
                 <tr>
@@ -115,14 +206,14 @@
     </div>
 
     <div class="container">
-        <h1>List example</h1>
-        <ul class="list-group">
+        <h1>#List example</h1>
+        <ul class="list">
             <li class="active">Item</li>
-            <ul class="list-group">
+            <ul class="list">
                 <li>Item</li>
                 <li>Item</li>
                 <li>Item</li>
-                <ul class="list-group">
+                <ul class="list">
                     <li>Item</li>
                     <li>Item</li>
                     <li>Item</li>
@@ -133,21 +224,643 @@
         </ul>
 
         <h4>Ordered list</h4>
-        <ol class="list-group list-group--ordered" type="a">
+        <ol class="list list--ordered" type="a">
             <li class="active">Item</li>
-            <ol class="list-group">
+            <ol class="list">
                 <li>Item</li>
                 <li>Item</li>
                 <li>Item</li>
             </ol>
             <li>Item</li>
             <li>Item</li>
-            <ol class="list-group">
+            <ol class="list">
                 <li>Item</li>
                 <li>Item</li>
                 <li>Item</li>
             </ol>
         </ol>
+    </div>
+
+    <div class="container">
+        <h1>#Colors</h1>
+
+        <h4>Red</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>red-50-color</td>
+                    <td class="red-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-100-color</td>
+                    <td class="red-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-200-color</td>
+                    <td class="red-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-300-color</td>
+                    <td class="red-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-400-color</td>
+                    <td class="red-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-500-color</td>
+                    <td class="red-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-600-color</td>
+                    <td class="red-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-700-color</td>
+                    <td class="red-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-800-color</td>
+                    <td class="red-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-900-color</td>
+                    <td class="red-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-a100-color</td>
+                    <td class="red-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-a200-color</td>
+                    <td class="red-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-a400-color</td>
+                    <td class="red-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>red-a700-color</td>
+                    <td class="red-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Pink</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>pink-50-color</td>
+                    <td class="pink-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-100-color</td>
+                    <td class="pink-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-200-color</td>
+                    <td class="pink-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-300-color</td>
+                    <td class="pink-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-400-color</td>
+                    <td class="pink-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-500-color</td>
+                    <td class="pink-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-600-color</td>
+                    <td class="pink-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-700-color</td>
+                    <td class="pink-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-800-color</td>
+                    <td class="pink-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-900-color</td>
+                    <td class="pink-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-a100-color</td>
+                    <td class="pink-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-a200-color</td>
+                    <td class="pink-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-a400-color</td>
+                    <td class="pink-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>pink-a700-color</td>
+                    <td class="pink-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Purple</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>purple-50-color</td>
+                    <td class="purple-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-100-color</td>
+                    <td class="purple-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-200-color</td>
+                    <td class="purple-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-300-color</td>
+                    <td class="purple-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-400-color</td>
+                    <td class="purple-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-500-color</td>
+                    <td class="purple-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-600-color</td>
+                    <td class="purple-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-700-color</td>
+                    <td class="purple-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-800-color</td>
+                    <td class="purple-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-900-color</td>
+                    <td class="purple-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-a100-color</td>
+                    <td class="purple-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-a200-color</td>
+                    <td class="purple-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-a400-color</td>
+                    <td class="purple-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>purple-a700-color</td>
+                    <td class="purple-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Blue</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>blue-50-color</td>
+                    <td class="blue-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-100-color</td>
+                    <td class="blue-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-200-color</td>
+                    <td class="blue-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-300-color</td>
+                    <td class="blue-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-400-color</td>
+                    <td class="blue-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-500-color</td>
+                    <td class="blue-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-600-color</td>
+                    <td class="blue-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-700-color</td>
+                    <td class="blue-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-800-color</td>
+                    <td class="blue-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-900-color</td>
+                    <td class="blue-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-a100-color</td>
+                    <td class="blue-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-a200-color</td>
+                    <td class="blue-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-a400-color</td>
+                    <td class="blue-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>blue-a700-color</td>
+                    <td class="blue-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Green</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>green-50-color</td>
+                    <td class="green-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-100-color</td>
+                    <td class="green-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-200-color</td>
+                    <td class="green-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-300-color</td>
+                    <td class="green-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-400-color</td>
+                    <td class="green-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-500-color</td>
+                    <td class="green-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-600-color</td>
+                    <td class="green-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-700-color</td>
+                    <td class="green-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-800-color</td>
+                    <td class="green-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-900-color</td>
+                    <td class="green-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-a100-color</td>
+                    <td class="green-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-a200-color</td>
+                    <td class="green-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-a400-color</td>
+                    <td class="green-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>green-a700-color</td>
+                    <td class="green-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Yellow</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>yellow-50-color</td>
+                    <td class="yellow-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-100-color</td>
+                    <td class="yellow-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-200-color</td>
+                    <td class="yellow-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-300-color</td>
+                    <td class="yellow-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-400-color</td>
+                    <td class="yellow-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-500-color</td>
+                    <td class="yellow-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-600-color</td>
+                    <td class="yellow-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-700-color</td>
+                    <td class="yellow-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-800-color</td>
+                    <td class="yellow-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-900-color</td>
+                    <td class="yellow-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-a100-color</td>
+                    <td class="yellow-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-a200-color</td>
+                    <td class="yellow-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-a400-color</td>
+                    <td class="yellow-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>yellow-a700-color</td>
+                    <td class="yellow-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Orange</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>orange-50-color</td>
+                    <td class="orange-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-100-color</td>
+                    <td class="orange-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-200-color</td>
+                    <td class="orange-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-300-color</td>
+                    <td class="orange-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-400-color</td>
+                    <td class="orange-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-500-color</td>
+                    <td class="orange-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-600-color</td>
+                    <td class="orange-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-700-color</td>
+                    <td class="orange-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-800-color</td>
+                    <td class="orange-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-900-color</td>
+                    <td class="orange-900-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-a100-color</td>
+                    <td class="orange-a100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-a200-color</td>
+                    <td class="orange-a200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-a400-color</td>
+                    <td class="orange-a400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>orange-a700-color</td>
+                    <td class="orange-a700-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Brown</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>brown-50-color</td>
+                    <td class="brown-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-100-color</td>
+                    <td class="brown-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-200-color</td>
+                    <td class="brown-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-300-color</td>
+                    <td class="brown-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-400-color</td>
+                    <td class="brown-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-500-color</td>
+                    <td class="brown-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-600-color</td>
+                    <td class="brown-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-700-color</td>
+                    <td class="brown-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-800-color</td>
+                    <td class="brown-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>brown-900-color</td>
+                    <td class="brown-900-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Grey</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>grey-50-color</td>
+                    <td class="grey-50-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-100-color</td>
+                    <td class="grey-100-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-200-color</td>
+                    <td class="grey-200-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-300-color</td>
+                    <td class="grey-300-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-400-color</td>
+                    <td class="grey-400-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-500-color</td>
+                    <td class="grey-500-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-600-color</td>
+                    <td class="grey-600-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-700-color</td>
+                    <td class="grey-700-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-800-color</td>
+                    <td class="grey-800-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>grey-900-color</td>
+                    <td class="grey-900-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Black and White</h4>
+        <table class="table table--striped table--responsive">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th style="width: 200px;">Hex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>black-base-color</td>
+                    <td class="black-base-color">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>white-base-color</td>
+                    <td class="white-base-color">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

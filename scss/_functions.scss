@@ -1,0 +1,8 @@
+// This function is used to get the hex from a color and tones passed by parameter.
+@function get-color($color, $tone) {
+  @return map-get(map-get($colors, $color), $tone);
+}
+
+@function opacity($color, $value) {
+  @return rgba($color, $value);
+}

@@ -5,7 +5,7 @@
   width: 100%;
 
   thead {
-    color: $black;
+    color: get-color('black', base);
 
     tr {
       display: table-row;
@@ -31,7 +31,7 @@
   &--striped {
     tbody > tr {
       &:nth-child(odd) {
-        background-color: $light-grey;
+        background-color: get-color('grey', 200);
       }
     }
   }
@@ -39,7 +39,7 @@
   &--highlight {
     tbody > tr {
       &:hover {
-        background-color: $light-grey;
+        background-color: get-color('grey', 200);
       }
     }
   }
@@ -60,7 +60,7 @@
 
   &--responsive {
     @media screen and (max-width: unquote(map-get($medias, md) + 'px')) {
-      border: 1px solid $grey;
+      border: 1px solid get-color('grey', 400);
       border-spacing: 0;
       display: block;
 
@@ -87,7 +87,7 @@
           display: inline-block;
 
           &:nth-child(odd) {
-            background-color: $light-grey;
+            background-color: get-color('grey', 200);
           }
 
           td {

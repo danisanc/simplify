@@ -1,7 +1,7 @@
 // Container
 .container {
   margin: 0 auto;
-  max-width: $containersize * 1px;
+  max-width: map-get($medias, 'sm') * 1px;
 
   &--fluid {
     margin: 0;
@@ -9,6 +9,7 @@
   }
 }
 
+// Row
 .row {
   display: flex;
   flex-wrap: wrap;

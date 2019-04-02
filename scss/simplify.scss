@@ -1,6 +1,5 @@
 // SIMPLIFY CSS
-@import 'color-palette';
-@import 'colors';
+@import 'functions';
 @import 'config';
 @import 'reset';
 @import 'mixins';
@@ -8,8 +7,8 @@
 @import 'form';
 @import 'table';
 @import 'list';
+@import 'colors';
 @import 'responsive';
 
 // Components
-//@import 'components/component';
 @import 'components/documentation';

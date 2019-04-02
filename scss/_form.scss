@@ -3,8 +3,7 @@
   flex-wrap: wrap;
 
   &--bordered {
-    border: 1px solid $grey;
-    border-radius: 5px;
+    border: 1px solid get-color('grey', 400);
     padding: $padding / 1.5;
   }
 }
@@ -16,8 +15,8 @@
 
 @for $i from 1 through $formdivisions {
   .form-group-#{$i} {
-    flex: 0 0 (100 / $i) * 1%;
-    max-width: (100 / $i) * 1%;
+    flex: 0 0 (100 / ($formdivisions / $i)) * 1%;
+    max-width: (100 / ($formdivisions / $i)) * 1%;
   }
 }
 
@@ -32,7 +31,7 @@
   input,
   select,
   textarea {
-    border: 1px solid $grey;
+    border: 1px solid get-color('grey', 400);
     border-radius: 5px;
     display: block;
     padding: $padding / 2;
@@ -58,15 +57,15 @@
     padding: $padding / 1.5;
 
     &--yes {
-      @include form-button-style($yes-color, $yes-color-hover, $white);
+      @include form-button-style(get-color('green', 500), get-color('green', 600), get-color('white', base));
     }
 
     &--no {
-      @include form-button-style($no-color, $no-color-hover, $white);
+      @include form-button-style(get-color('red', 700), get-color('red', 800), get-color('white', base));
     }
 
     &--normal {
-      @include form-button-style($normal-color, $normal-color-hover, $white);
+      @include form-button-style(get-color('blue', 500), get-color('blue', 600), get-color('white', base));
     }
   }
 }

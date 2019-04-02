@@ -1,4 +1,4 @@
-.list-group {
+.list {
   list-style-type: circle;
   margin: 0;
   padding-left: $padding;
@@ -8,10 +8,11 @@
   }
 
   li {
+    font-size: $font-size;
     padding: $padding / 4;
 
     &.active {
-      color: $normal-color;
+      color: get-color('blue', 500);
     }
   }
 }

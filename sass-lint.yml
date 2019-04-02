@@ -8,6 +8,7 @@ options:
   output-file: 'linters/sass-lint.html'
   # Raise an error if more than 50 warnings are generated
   max-warnings: 50
+
 # File Options
 files:
   include: 'scss/*.scss'
@@ -48,3 +49,7 @@ rules:
       properties:
         - margin
         - content
+  no-vendor-prefixes:
+    - 1
+    - 
+      ignore-non-standard: true
