@@ -8,8 +8,8 @@
   width: 100%;
 
   &__menu {
-    background-color: $white;
-    border-right: 1px solid $grey;
+    background-color: get-color('white', base);
+    border-right: 1px solid get-color('grey', 400);
     float: left;
     height: 100%;
     overflow: hidden;
@@ -28,7 +28,7 @@
       width: 30%;
 
       &::before {
-        background-color: $black-semitransparent;
+        background-color: opacity(get-color('black', base), .7);
         width: 100vw;
       }
     }
@@ -40,19 +40,19 @@
   }
 
   &__menu-topic {
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid get-color('grey', 400);
     font-weight: bold;
     padding: 1rem 0 1rem 1.5rem;
 
     &:hover,
     &:active {
-      background-color: $light-grey;
+      background-color: get-color('grey', 200);
     }
 
   }
 
   &__menu-button {
-    background-color: $white;
+    background-color: get-color('white', base);
     border-radius: 50%;
     display: none;
     height: 3rem;
@@ -75,7 +75,7 @@
 
 
   &__menu-icon {
-    background: $black;
+    background: get-color('black', base);
     display: block;
     height: .1rem;
     left: .5rem;
@@ -103,7 +103,7 @@
   }
 
   &__info {
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid get-color('grey', 400);
 
     &-img {
       height: 10rem;
@@ -155,7 +155,7 @@ input {
 }
 
 input:checked ~ label .doc__menu-button {
-  box-shadow: 0 0 0 180vw $black-semitransparent;
+  box-shadow: 0 0 0 180vw opacity(get-color('black', base), .7);
 }
 
 input:checked ~ .doc__menu {

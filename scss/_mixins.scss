@@ -1,6 +1,6 @@
 // Table
 @mixin cell($padding) {
-  border: 1px solid $grey;
+  border: 1px solid get-color('grey', 400);
   display: table-cell;
   padding: $padding;
   text-align: start;
