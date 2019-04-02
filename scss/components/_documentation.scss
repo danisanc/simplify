@@ -148,17 +148,19 @@
      }
   }
 
+  input {
+    display: none;
+  }
+  
+  input:checked ~ label .doc__menu-button {
+    box-shadow: 0 0 0 180vw $black-semitransparent;
+  }
+  
+  input:checked ~ .doc__menu {
+    opacity: 1;
+  
+  }
+
 }
 
-input {
-  display: none;
-}
 
-input:checked ~ label .doc__menu-button {
-  box-shadow: 0 0 0 180vw $black-semitransparent;
-}
-
-input:checked ~ .doc__menu {
-  opacity: 1;
-
-}
