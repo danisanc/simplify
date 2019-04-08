@@ -4,13 +4,24 @@
 
 # Simplify
 
-A simple CSS library to build complete websites using flexbox.
+A simple CSS library to build complete websites structures.
 
 ## Features
 
-- Grid, Form, Table, List system
+- Grid
+- Form
+- Table
+- List
 - Color pallet
 - Responsive
+
+## Usage
+
+1. Clone this repository
+2. Go to the folder
+3. Run `npm install`
+4. Run `npm run dev:watch` for watching file change during development (the output file goes to dest/simplify.css)
+4. Run `npm run build` to build project (the output file goes to dest/simplify.min.css)
 
 ## License
 
