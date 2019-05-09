@@ -6,6 +6,8 @@
 
 A simple CSS library to build complete websites structures.
 
+[DEMO](https://danielsclet.github.io/simplify/)
+
 ## Features
 
 - Grid
