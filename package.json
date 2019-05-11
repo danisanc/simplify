@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.11.0",
-    "sass-lint": "^1.12.1"
+    "node-sass": "^4.12.0",
+    "sass-lint": "^1.13.1"
   },
   "scripts": {
     "dev": "gulp sass",
