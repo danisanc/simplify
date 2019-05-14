@@ -4,9 +4,9 @@
 
 # Simplify
 
-A simple CSS library to build complete websites structures.
+A CSS library to simplify your structures.
 
-[DEMO](https://danielsclet.github.io/simplify/)
+See a [demo](https://danielsclet.github.io/simplify/).
 
 ## Features
 
