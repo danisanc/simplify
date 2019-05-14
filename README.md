@@ -10,14 +10,21 @@ See a [demo](https://danielsclet.github.io/simplify/).
 
 ## Features
 
-- Grid
-- Form
-- Table
-- List
-- Color pallet
-- Responsive
+- [x] Grid
+- [x] Form
+- [x] Table
+- [x] List
+- [x] Color pallet
+- [x] Responsive
+- [ ] Documentation
 
-## Usage
+## Installation
+
+1. Drink water
+2. Add ```<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/danielsclet/simplify/dest/simplify.min.css">``` inside ```<head>``` tag
+3. Done!
+
+## Develop
 
 1. Clone this repository
 2. Go to the folder
