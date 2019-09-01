@@ -1,5 +1,3 @@
-'use strict'
-
 const { src, dest, watch } = require('gulp')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
@@ -22,7 +20,7 @@ function buildFunc() {
     return src('./scss/simplify.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            Browserslist: ['last 2 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))

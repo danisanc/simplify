@@ -20,9 +20,13 @@ See a [demo](https://danielsclet.github.io/simplify/).
 
 ## Installation
 
-1. Drink water
-2. Add ```<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/danielsclet/simplify/dest/simplify.min.css">``` inside ```<head>``` tag
-3. Done!
+Using cdn:
+```cdn.jsdelivr.net/gh/danielsclet/simplify/dest/simplify.min.css```
+
+or
+
+Using npm:
+```npm i simplify```
 
 ## Develop
 
